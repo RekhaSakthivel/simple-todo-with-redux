@@ -11,7 +11,7 @@ function App() {
   const todoElements = todos.length> 0 && todos.map(todo => 
   <li key={todo.id}>
     {todo.title}
-    <button className='delete-todo'>X</button>
+    <button className='delete-todo' onClick={() => dispatch(deleteTodo(todo.id))}>X</button>
   </li>
   )
 
